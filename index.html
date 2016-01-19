@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{Title}</title>
+    
+    <style type="text/css">
+        body {
+            font-family: 'Alegreya Sans SC', sans-serif;
+            word-spacing: 2px;          
+            color: black;
+        }
+
+        .left-bottom-light {
+            background: #ffffff; /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNiUiIHN0b3AtY29sb3I9IiM4NDg0ODQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIyMCUiIHN0b3AtY29sb3I9IiMxNjE2MTYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5MCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+            background: -moz-linear-gradient(45deg,  #ffffff 0%, #848484 6%, #161616 20%, #000000 90%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#ffffff), color-stop(6%,#848484), color-stop(20%,#161616), color-stop(90%,#000000)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(45deg,  #ffffff 0%,#848484 6%,#161616 20%,#000000 90%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(45deg,  #ffffff 0%,#848484 6%,#161616 20%,#000000 90%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(45deg,  #ffffff 0%,#848484 6%,#161616 20%,#000000 90%); /* IE10+ */
+            background: linear-gradient(45deg,  #ffffff 0%,#848484 6%,#161616 20%,#000000 90%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+        }
+
+        .left-bottom-light-flicker {
+            background: #ffffff; /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNjElIiBzdG9wLWNvbG9yPSIjODQ4NDg0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzQlIiBzdG9wLWNvbG9yPSIjMTYxNjE2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+            background: -moz-linear-gradient(45deg,  #ffffff 0%, #848484 61%, #161616 74%, #000000 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#ffffff), color-stop(61%,#848484), color-stop(74%,#161616), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(45deg,  #ffffff 0%,#848484 61%,#161616 74%,#000000 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(45deg,  #ffffff 0%,#848484 61%,#161616 74%,#000000 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(45deg,  #ffffff 0%,#848484 61%,#161616 74%,#000000 100%); /* IE10+ */
+            background: linear-gradient(45deg,  #ffffff 0%,#848484 61%,#161616 74%,#000000 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+        }
+
+        .right-bottom-light {
+            background: #000000; /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjQlIiBzdG9wLWNvbG9yPSIjMTYxNjE2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODglIiBzdG9wLWNvbG9yPSIjODQ4NDg0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+            background: -moz-linear-gradient(-45deg,  #000000 0%, #161616 24%, #848484 88%, #ffffff 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#000000), color-stop(24%,#161616), color-stop(88%,#848484), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(-45deg,  #000000 0%,#161616 24%,#848484 88%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(-45deg,  #000000 0%,#161616 24%,#848484 88%,#ffffff 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(-45deg,  #000000 0%,#161616 24%,#848484 88%,#ffffff 100%); /* IE10+ */
+            background: linear-gradient(135deg,  #000000 0%,#161616 24%,#848484 88%,#ffffff 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+        }
+
+        .right-bottom-light-flicker {
+            background: #000000; /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjYlIiBzdG9wLWNvbG9yPSIjMTYxNjE2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMzklIiBzdG9wLWNvbG9yPSIjODQ4NDg0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+            background: -moz-linear-gradient(-45deg,  #000000 0%, #161616 26%, #848484 39%, #ffffff 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#000000), color-stop(26%,#161616), color-stop(39%,#848484), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(-45deg,  #000000 0%,#161616 26%,#848484 39%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(-45deg,  #000000 0%,#161616 26%,#848484 39%,#ffffff 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(-45deg,  #000000 0%,#161616 26%,#848484 39%,#ffffff 100%); /* IE10+ */
+            background: linear-gradient(135deg,  #000000 0%,#161616 26%,#848484 39%,#ffffff 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+        }
+
+        .left-top-light {
+            background: #ffffff; /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTIlIiBzdG9wLWNvbG9yPSIjODQ4NDg0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzYlIiBzdG9wLWNvbG9yPSIjMTYxNjE2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+            background: -moz-linear-gradient(-45deg,  #ffffff 0%, #848484 12%, #161616 76%, #000000 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(12%,#848484), color-stop(76%,#161616), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#848484 12%,#161616 76%,#000000 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(-45deg,  #ffffff 0%,#848484 12%,#161616 76%,#000000 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(-45deg,  #ffffff 0%,#848484 12%,#161616 76%,#000000 100%); /* IE10+ */
+            background: linear-gradient(135deg,  #ffffff 0%,#848484 12%,#161616 76%,#000000 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+        }
+
+        .left-top-light-flicker {
+            background: #ffffff; /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNjElIiBzdG9wLWNvbG9yPSIjODQ4NDg0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzQlIiBzdG9wLWNvbG9yPSIjMTYxNjE2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+            background: -moz-linear-gradient(-45deg,  #ffffff 0%, #848484 61%, #161616 74%, #000000 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(61%,#848484), color-stop(74%,#161616), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#848484 61%,#161616 74%,#000000 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(-45deg,  #ffffff 0%,#848484 61%,#161616 74%,#000000 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(-45deg,  #ffffff 0%,#848484 61%,#161616 74%,#000000 100%); /* IE10+ */
+            background: linear-gradient(135deg,  #ffffff 0%,#848484 61%,#161616 74%,#000000 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+        }
+
+        .right-top-light {
+            background: #000000; /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjQlIiBzdG9wLWNvbG9yPSIjMTYxNjE2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iODglIiBzdG9wLWNvbG9yPSIjODQ4NDg0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+            background: -moz-linear-gradient(45deg,  #000000 0%, #161616 24%, #848484 88%, #ffffff 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#000000), color-stop(24%,#161616), color-stop(88%,#848484), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(45deg,  #000000 0%,#161616 24%,#848484 88%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(45deg,  #000000 0%,#161616 24%,#848484 88%,#ffffff 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(45deg,  #000000 0%,#161616 24%,#848484 88%,#ffffff 100%); /* IE10+ */
+            background: linear-gradient(45deg,  #000000 0%,#161616 24%,#848484 88%,#ffffff 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+        }
+
+        .right-top-light-flicker {
+            background: #000000; /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMjYlIiBzdG9wLWNvbG9yPSIjMTYxNjE2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMzklIiBzdG9wLWNvbG9yPSIjODQ4NDg0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+            background: -moz-linear-gradient(45deg,  #000000 0%, #161616 26%, #848484 39%, #ffffff 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#000000), color-stop(26%,#161616), color-stop(39%,#848484), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(45deg,  #000000 0%,#161616 26%,#848484 39%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(45deg,  #000000 0%,#161616 26%,#848484 39%,#ffffff 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(45deg,  #000000 0%,#161616 26%,#848484 39%,#ffffff 100%); /* IE10+ */
+            background: linear-gradient(45deg,  #000000 0%,#161616 26%,#848484 39%,#ffffff 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+        }
+
+        .light-off {
+            background: #000;
+        }
+
+        .post {
+            background-color: white;
+            padding: 30px;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            -webkit-border-radius: 20px 20px 20px 20px;
+            border-radius: 20px 20px 20px 20px;
+            text-align: center;
+            -moz-opacity: 0.91;
+            opacity: 0.91;
+            width: 60%;           
+        }
+
+        .left-bottom-shadow {
+            -webkit-box-shadow: 15px -15px 5px 1px #030303;
+            box-shadow: 15px -15px 5px 1px #030303;
+        }
+
+        .left-bottom-shadow-flicker {
+            -webkit-box-shadow: 20px -20px 5px 1px #030303;
+            box-shadow: 20px -20px 5px 1px #030303;
+        }
+
+        .right-bottom-shadow {
+            -webkit-box-shadow: -15px -15px 5px 1px #030303;
+            box-shadow: -15px -15px 5px 1px #030303;
+        }
+
+        .right-bottom-shadow-flicker {
+            -webkit-box-shadow: -20px -20px 5px 1px #030303;
+            box-shadow: -20px -20px 5px 1px #030303;
+        }
+
+        .left-top-shadow {
+            -webkit-box-shadow: 15px 15px 5px 1px #030303;
+            box-shadow: 15px 15px 5px 1px #030303;
+        }
+
+        .left-top-shadow-flicker {
+            -webkit-box-shadow: 20px 20px 5px 1px #030303;
+            box-shadow: 20px 20px 5px 1px #030303;
+        }
+
+        .right-top-shadow {
+            -webkit-box-shadow: -15px 15px 5px 1px #030303;
+            box-shadow: -15px 15px 5px 1px #030303;
+        }
+
+        .right-top-shadow-flicker {
+            -webkit-box-shadow: -20px 20px 5px 1px #030303;
+            box-shadow: -20px 20px 5px 1px #030303;
+        }
+
+        .light-off-shadow {
+            -webkit-box-shadow: 0 0 0 0 #030303;
+            box-shadow: 0 0 0 0 #030303;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        ol {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        a {
+            color: #222;
+        }
+
+        .white-text {
+            color: white;
+        }
+
+        input[type=button] {
+            border: 1px solid white;
+            -webkit-border-radius: 20px 20px 20px 20px;
+            border-radius: 20px 20px 20px 20px;
+        }
+
+        .selected {
+            background: white !important;
+            color: black !important;
+        }
+
+        .not-selected {
+            background: black !important;
+            color: white !important;
+        }
+
+    </style>
+    
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://ghosthuntar.namespacemedia.com/Content/themes/base/jquery-ui-1.10.3.custom.css"/>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://ghosthuntar.namespacemedia.com//Scripts/jquery/jquery-ui-1.10.3.custom.js"></script>
+    <script type="text/javascript">
+
+        var Penlight = {};
+
+        Penlight.isLeft = true;
+        Penlight.isTop = false;
+        Penlight.lightOff = true;
+        Penlight.switchTime = 250;
+        Penlight.lightOnTime = 30000;
+        Penlight.lightOffTime = 3000;
+        Penlight.flickerTime = 100;
+        Penlight.flickerWaitTime = 500;
+        
+        Penlight.oldLightClass = "light-off";
+        Penlight.oldShadowClass = "light-off-shadow";
+        Penlight.newLightClass = "";
+        Penlight.newShadowClass = "";
+
+        Penlight.cancelLight = function () {
+
+            clearTimeout(Penlight.timeout);
+
+            Penlight.lightOff = true;
+
+            if (Penlight.oldLightClass != "light-off") {
+                
+                $("body").switchClass(Penlight.oldLightClass, "light-off", Penlight.switchTime);
+                Penlight.oldLightClass = "light-off";
+
+                Penlight.timeout = setTimeout(function() {
+
+                    $(".post").switchClass(Penlight.oldShadowClass, "light-off-shadow", Penlight.switchTime);
+                    Penlight.oldShadowClass = "light-off-shadow";
+
+                }, 500);
+                
+            }
+
+        };
+
+        Penlight.processLight = function () {
+            
+            Penlight.oldLightClass = "light-off";
+            Penlight.oldShadowClass = "light-off-shadow";
+            Penlight.newLightClass = "";
+            Penlight.newShadowClass = "";
+
+            Penlight.timeout = setTimeout(function() {
+                Penlight.turnLightOn();
+            }, Penlight.lightOffTime);
+
+        };
+
+        Penlight.changeLight = function() {
+
+            var rand = Math.random();
+
+            if (rand <= 0.25) {
+
+                Penlight.newLightClass = "right-bottom-light";
+                Penlight.newShadowClass = "right-bottom-shadow";
+
+                Penlight.isLeft = false;
+                Penlight.isTop = false;
+            }
+            else if (rand > 0.25 && rand <= 0.50) {
+
+                Penlight.newLightClass = "right-top-light";
+                Penlight.newShadowClass = "right-top-shadow";
+
+                Penlight.isTop = true;
+                Penlight.isLeft = false;
+            }
+            else if (rand > 0.50 && rand <= 0.75) {
+
+                Penlight.newLightClass = "left-top-light";
+                Penlight.newShadowClass = "left-top-shadow";
+
+                Penlight.isLeft = true;
+                Penlight.isTop = true;
+            }
+            else {
+
+                Penlight.newLightClass = "left-bottom-light";
+                Penlight.newShadowClass = "left-bottom-shadow";
+
+                Penlight.isLeft = true;
+                Penlight.isTop = false;
+            }
+
+            if (Penlight.oldLightClass != Penlight.newLightClass) {
+                $("body").switchClass(Penlight.oldLightClass, Penlight.newLightClass, Penlight.switchTime);
+                Penlight.oldLightClass = Penlight.newLightClass;
+
+                $(".post").switchClass(Penlight.oldShadowClass, Penlight.newShadowClass, Penlight.switchTime);
+                Penlight.oldShadowClass = Penlight.newShadowClass;
+            }
+
+            rand = Math.random();
+            
+            if (rand <= 0.5) {
+                setTimeout(function () {
+                    Penlight.flickerLight();
+                }, Penlight.flickerWaitTime);
+            }
+
+        };
+
+        Penlight.turnLightOn = function () {
+            
+            Penlight.lightOff = false;
+            
+            Penlight.changeLight();
+
+            Penlight.timeout = setTimeout(function () {
+                Penlight.turnLightOff();
+            }, Penlight.lightOnTime);
+        };
+
+        Penlight.turnLightOff = function () {
+            
+            Penlight.lightOff = true;
+
+            $("body").switchClass(Penlight.oldLightClass, "light-off", Penlight.switchTime);
+            Penlight.oldLightClass = "light-off";
+
+            Penlight.timeout = setTimeout(function () {
+                
+                $(".post").switchClass(Penlight.oldShadowClass, "light-off-shadow", Penlight.switchTime);
+                Penlight.oldShadowClass = "light-off-shadow";
+                
+                setTimeout(function () {
+                    Penlight.turnLightOn();
+                }, Penlight.lightOffTime);
+                
+            }, 500);
+                  
+        };
+
+        Penlight.flickerLight = function() {
+
+            $("body").switchClass(Penlight.oldLightClass, Penlight.oldLightClass + "-flicker", Penlight.switchTime);
+            $(".post").switchClass(Penlight.oldShadowClass, Penlight.oldShadowClass + "-flicker", Penlight.switchTime);
+
+            setTimeout(function () {
+                
+                $("body").switchClass(Penlight.oldLightClass + "-flicker", Penlight.oldLightClass, Penlight.switchTime);
+                $(".post").switchClass(Penlight.oldShadowClass + "-flicker", Penlight.oldShadowClass, Penlight.switchTime);
+                
+                setTimeout(function () {
+                    
+                    $("body").switchClass(Penlight.oldLightClass, Penlight.oldLightClass + "-flicker", Penlight.switchTime);
+                    $(".post").switchClass(Penlight.oldShadowClass, Penlight.oldShadowClass + "-flicker", Penlight.switchTime);
+                    
+                    setTimeout(function () {
+
+                        $("body").switchClass(Penlight.oldLightClass + "-flicker", Penlight.oldLightClass, Penlight.switchTime);
+                        $(".post").switchClass(Penlight.oldShadowClass + "-flicker", Penlight.oldShadowClass, Penlight.switchTime);
+
+                    }, Penlight.flickerTime);
+
+                }, Penlight.flickerTime);
+
+            }, Penlight.flickerTime);
+
+        };
+
+        $(document).ready(function () {
+
+            $(".post").addClass("light-off-shadow");
+
+            $("#offButton").click(function() {
+                Penlight.cancelLight();
+                $(this).removeClass("not-selected");
+                $(this).addClass("selected");
+                $("#onButton").removeClass("selected");
+                $("#onButton").addClass("not-selected");
+            });
+            
+            $("#onButton").click(function () {
+                Penlight.processLight();
+                $(this).removeClass("not-selected");
+                $(this).addClass("selected");
+                $("#offButton").removeClass("selected");
+                $("#offButton").addClass("not-selected");
+            });
+
+            Penlight.processLight();
+
+        });
+
+    </script>
+</head>
+    <body class="light-off">
+        <div id="content">
+        <h1 class="white-text">{Title}</h1>
+
+        {block:Description}
+        <p class="white-text" id="description">{Description}</p>
+        {/block:Description}
+            
+            <input class="not-selected" id="offButton" type="button" value="Off"/>
+            <input class="selected" id="onButton" type="button" value="On"/>
+
+            <ol id="posts">
+            {block:Posts}{block:Text}
+            <li class="post text">
+                {block:Title}
+                <h3><a href="{Permalink}">{Title}</a></h3>
+                {/block:Title}{Body}
+            </li>
+            {/block:Text}{block:Photo}
+            <li class="post photo">
+                <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                {block:Caption}
+                <div class="caption">{Caption}</div>
+                {/block:Caption}
+            </li>
+            {/block:Photo}{block:Panorama}
+            <li class="post panorama">
+                {LinkOpenTag}
+                <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                {LinkCloseTag}{block:Caption}
+                <div class="caption">{Caption}</div>
+                {/block:Caption}
+            </li>
+            {/block:Panorama}{block:Photoset}
+            <li class="post photoset">
+                {Photoset-500}{block:Caption}
+                <div class="caption">{Caption}</div>
+                {/block:Caption}
+            </li>
+            {/block:Photoset}{block:Quote}
+            <li class="post quote">
+                "{Quote}"
+
+                {block:Source}
+                <div class="source">{Source}</div>
+                {/block:Source}
+            </li>
+            {/block:Quote}{block:Link}
+            <li class="post link">
+                <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                {block:Description}
+                <div class="description">{Description}</div>
+                {/block:Description}
+            </li>
+            {/block:Link}{block:Chat}
+            <li class="post chat">
+                {block:Title}
+                <h3><a href="{Permalink}">{Title}</a></h3>
+                {/block:Title}
+                <ul class="chat">
+                    {block:Lines}
+                    <li class="{Alt} user_{UserNumber}">
+                        {block:Label}
+                        <span class="label">{Label}</span>
+                        {/block:Label}{Line}
+                    </li>
+                    {/block:Lines}
+                </ul>
+            </li>
+            {/block:Chat}{block:Video}
+            <li class="post video">
+                {Video-500}{block:Caption}
+                <div class="caption">{Caption}</div>
+                {/block:Caption}
+            </li>
+            {/block:Video}{block:Audio}
+            <li class="post audio">
+                {AudioPlayerBlack}{block:Caption}
+                <div class="caption">{Caption}</div>
+                {/block:Caption}
+            </li>
+            {/block:Audio}{/block:Posts}
+        </ol>
+
+            <p style="margin: auto; text-align: center; color: black !important;" id="footer">
+                {block:PreviousPage}
+                <a href="{PreviousPage}">&#171; Previous</a>
+                {/block:PreviousPage}
+                <a href="/archive">Archive</a>
+                {block:NextPage}
+                <a href="{NextPage}">Next &#187;</a>
+                {/block:NextPage}           
+            </p>           
+        </div>
+    </body>
+</html>
